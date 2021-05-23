@@ -41,6 +41,21 @@ Icon.args = {
   src: Samsung,
 }
 
+export const Icons = Template.bind({})
+Icons.args = {
+  variant: CardVariant.Icons,
+  title: "Softwares",
+  textContent:
+    "JIRA | Trello | SharePoint Computer-Aided Translation (CAT) Translation Management System (TMS) Photoshop | Illustrator",
+  icons: [
+    { src: Samsung },
+    { src: Samsung },
+    { src: Samsung },
+    { src: Samsung },
+    { src: Samsung },
+  ],
+}
+
 export const Image = Template.bind({})
 Image.args = {
   variant: CardVariant.Image,

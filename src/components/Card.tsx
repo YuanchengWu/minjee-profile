@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 
 export enum CardVariant {
   Icon = "icon",
+  Icons = "icons",
   Image = "image",
 }
 
@@ -27,6 +28,8 @@ export interface CardProps extends ImgHTMLAttributes<HTMLImageElement> {
    * The card's label text content. Hidden if not provided.
    */
   label?: string
+
+  icons?: ImgHTMLAttributes<HTMLImageElement>[]
 }
 
 const Background = styled("article")<Pick<CardProps, "variant">>(
@@ -100,8 +103,8 @@ const Label = styled("p")(
 
 const ContentContainer = styled("div")({
   display: "flex",
-  justifyContent: "space-between",
   alignContent: "flex-end",
+  flexWrap: "wrap",
 })
 
 const Image = styled("img")({
@@ -111,16 +114,32 @@ const Image = styled("img")({
   marginTop: "0.8rem",
 })
 
-const Icon = styled("img")({
-  borderRadius: "50%",
-  width: "4.8rem",
-})
+const Icon = styled("img")<Pick<CardProps, "variant">>(
+  {
+    borderRadius: "50%",
+    width: "4.8rem",
+  },
+  ({ variant }) => {
+    switch (variant) {
+      case CardVariant.Icon:
+        return {
+          marginLeft: "auto",
+        }
+      case CardVariant.Icons:
+        return {
+          marginTop: "0.8rem",
+          marginRight: "auto",
+        }
+    }
+  }
+)
 
 export function Card({
   variant = CardVariant.Icon,
   title,
   textContent,
   label,
+  icons,
   ...imgProps
 }: CardProps): JSX.Element {
   return (
@@ -131,7 +150,13 @@ export function Card({
       {variant === CardVariant.Icon && (
         <ContentContainer>
           {label && <Label>{label}</Label>}
-          <Icon {...imgProps} />
+          <Icon variant={variant} {...imgProps} />
+        </ContentContainer>
+      )}
+      {variant === CardVariant.Icons && (
+        <ContentContainer>
+          {label && <Label>{label}</Label>}
+          {icons && icons.map((icon) => <Icon variant={variant} {...icon} />)}
         </ContentContainer>
       )}
     </Background>
