@@ -1,17 +1,28 @@
 import { Meta, Story } from "@storybook/react"
 
-import { Card, CardProps } from "../Card"
+import { Card, CardProps, CardVariant } from "../Card"
+import ProfilePic from "../../images/linkedin-profile-edited.jpg"
+import Samsung from "../../images/samsung.svg"
 
 export default {
   title: "Components/Card",
   component: Card,
   decorators: [
     (Story) => (
-      <div style={{ margin: "auto", width: 260, height: "100vh" }}>
+      <div style={{ width: 260, backgroundRepeat: "no-repeat" }}>
         <Story />
       </div>
     ),
   ],
+  argTypes: {
+    variant: {
+      options: CardVariant,
+      control: {
+        type: "radio",
+      },
+      defaultValue: CardVariant.Icon,
+    },
+  },
   parameters: {
     backgrounds: {
       default: "Gradient",
@@ -21,7 +32,20 @@ export default {
 
 const Template: Story<CardProps> = (args) => <Card {...args} />
 
+export const Icon = Template.bind({})
+Icon.args = {
+  variant: CardVariant.Icon,
+  title: "Bilingual Facility Planner",
+  textContent: "Samsung Research America",
+  label: "Jun 2019 — May 2020",
+  src: Samsung,
+}
+
 export const Image = Template.bind({})
 Image.args = {
-  title: "Title",
+  variant: CardVariant.Image,
+  title: "I’m a Project Manager.",
+  textContent:
+    "Also a Designer with a keen eye for creating marketable, accessible, and localizable products",
+  src: ProfilePic,
 }

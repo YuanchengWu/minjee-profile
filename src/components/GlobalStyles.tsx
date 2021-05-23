@@ -1,9 +1,17 @@
 import { Global, css } from "@emotion/react"
 
 const globalStyles = css`
-  body {
+  :root {
+    font-size: 62.5%;
+  }
+
+  html {
     font-family: -apple-system, Roboto, "Segoe UI", Oxygen, Ubuntu, Cantarell,
       "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  p {
+    margin: 0;
   }
 `
 

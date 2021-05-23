@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@emotion/react"
-import { GlobalStyles } from "../src/components/GlobalStyles"
 
+import { GlobalStyles } from "../src/components/GlobalStyles"
 import { lightTheme } from "../src/theme"
 
 export const parameters = {
@@ -16,7 +16,7 @@ export const parameters = {
       {
         name: "Gradient",
         value:
-          "linear-gradient(213.47deg, #FFF8EA 10.99%, #E7F9F5 30.37%, #FEE7E4 46.18%, #F5EEF7 71.1%, #F5FAED 86.93%);",
+          "linear-gradient(213.47deg, #FDFAE5 10.99%, #E4F7FA 30.37%, #FBEDEB 46.18%, #F7F0FA 71.1%, #ECFBF3 86.93%);",
       },
     ],
   },
