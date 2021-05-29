@@ -1,5 +1,6 @@
 import { ImgHTMLAttributes } from "react"
 import styled from "@emotion/styled"
+import { rgba } from "emotion-rgba"
 
 export enum CardVariant {
   Icon = "icon",
@@ -29,6 +30,9 @@ export interface CardProps extends ImgHTMLAttributes<HTMLImageElement> {
    */
   label?: string
 
+  /**
+   * The list of icons to diplay. Only renders when variant is set to `Icons`.
+   */
   icons?: ImgHTMLAttributes<HTMLImageElement>[]
 }
 
@@ -42,7 +46,7 @@ const Background = styled("article")<Pick<CardProps, "variant">>(
     overflow: "hidden",
   },
   ({ theme }) => ({
-    backgroundColor: theme.colors.white,
+    backgroundColor: rgba(theme.colors.white, 0.8),
   }),
   ({ variant }) => {
     switch (variant) {

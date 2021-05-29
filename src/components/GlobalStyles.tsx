@@ -10,8 +10,9 @@ const globalStyles = css`
       "Open Sans", "Helvetica Neue", sans-serif;
   }
 
-  p {
+  * {
     margin: 0;
+    padding: 0;
   }
 `
 

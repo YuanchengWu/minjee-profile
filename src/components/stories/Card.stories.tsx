@@ -9,7 +9,7 @@ export default {
   component: Card,
   decorators: [
     (Story) => (
-      <div style={{ width: 260, backgroundRepeat: "no-repeat" }}>
+      <div style={{ width: 260 }}>
         <Story />
       </div>
     ),
