@@ -15,8 +15,14 @@ export const parameters = {
     values: [
       {
         name: "Gradient",
-        value:
-          "linear-gradient(213.47deg, #FDFAE5 10.99%, #E4F7FA 30.37%, #FBEDEB 46.18%, #F7F0FA 71.1%, #ECFBF3 86.93%);",
+        value: `linear-gradient(
+          213.47deg,
+          ${lightTheme.colors.yellow50} 10.99%, 
+          ${lightTheme.colors.sky50} 30.37%, 
+          ${lightTheme.colors.red50} 46.18%, 
+          ${lightTheme.colors.purple50} 71.1%, 
+          ${lightTheme.colors.lime50} 86.93%
+        )`,
       },
     ],
   },
