@@ -4,7 +4,7 @@ import { ThemeContext } from "@emotion/react"
 import { useTranslation } from "react-i18next"
 
 import { ListTitle } from "./ListTitle"
-import { Card, CardProps, CardVariant } from "./Card"
+import { Card, CardVariant } from "./Card"
 import ProfilePic from "../images/linkedin-profile-edited.jpg"
 import Samsung from "../images/samsung.svg"
 
