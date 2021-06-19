@@ -4,8 +4,8 @@ import styled from "@emotion/styled"
 import { GlobalStyles } from "../components/GlobalStyles"
 import { lightTheme } from "../theme"
 import "../i18n"
-import { useTranslation } from "react-i18next"
-import { useState } from "react"
+import { Suspense } from "react"
+import { IndexContent } from "../components/IndexContent"
 
 const Main = styled("main")(
   {
@@ -31,31 +31,16 @@ const Main = styled("main")(
   })
 )
 
-const Heading = styled("h1")(
-  {
-    fontFamily: "Roboto",
-    fontWeight: 700,
-    fontSize: "3.6rem",
-    textAlign: "center",
-    textTransform: "uppercase",
-    gridArea: "header",
-    alignSelf: "center",
-  },
-  ({ theme }) => ({
-    color: theme.colors.gray2,
-  })
-)
-
 function IndexPage(): JSX.Element {
-  const { t } = useTranslation()
-
   return (
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyles />
-      <Main>
-        <Heading>{t("heading")}</Heading>
-      </Main>
-    </ThemeProvider>
+    <Suspense fallback="loading...">
+      <ThemeProvider theme={lightTheme}>
+        <GlobalStyles />
+        <Main>
+          <IndexContent />
+        </Main>
+      </ThemeProvider>
+    </Suspense>
   )
 }
 

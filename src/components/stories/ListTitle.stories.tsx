@@ -24,6 +24,6 @@ const Template: Story<ListTitleProps> = (args) => <ListTitle {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  title: "About",
   backgroundColor: lightTheme.colors.sky500,
+  children: "About",
 }

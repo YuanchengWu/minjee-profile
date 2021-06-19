@@ -2,11 +2,6 @@ import styled from "@emotion/styled"
 
 export type ListTitleProps = {
   /**
-   * The title text.
-   */
-  title: string
-
-  /**
    * The background color.
    */
   backgroundColor: string
@@ -36,13 +31,13 @@ const Title = styled("h2")(
   })
 )
 
-export function ListTitle({
-  title,
+export const ListTitle: React.FC<ListTitleProps> = ({
   backgroundColor,
-}: ListTitleProps): JSX.Element {
+  children,
+}): JSX.Element => {
   return (
     <Background backgroundColor={backgroundColor}>
-      <Title>{title}</Title>
+      <Title>{children}</Title>
     </Background>
   )
 }
