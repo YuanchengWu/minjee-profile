@@ -15,7 +15,6 @@ module.exports = {
     'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-web-font-loader',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

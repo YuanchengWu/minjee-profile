@@ -1,6 +1,8 @@
 import { ImgHTMLAttributes } from 'react'
 import styled from '@emotion/styled'
 import { rgba } from 'emotion-rgba'
+import '@fontsource/roboto'
+import '@fontsource/source-sans-pro/600.css'
 
 export enum CardVariant {
   Icon = 'icon',
@@ -113,8 +115,8 @@ const ContentContainer = styled('div')({
 
 const Image = styled('img')({
   borderRadius: '2.0rem',
-  maxWidth: '100%',
-  maxHeight: '100%',
+  width: '22.4rem',
+  height: 'auto',
   marginTop: '0.8rem',
 })
 

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styled from '@emotion/styled'
 import { ThemeContext } from '@emotion/react'
 import { useTranslation } from 'react-i18next'
+import '@fontsource/roboto/700.css'
 
 import { ListTitle } from './ListTitle'
 import { Card, CardVariant } from './Card'
@@ -12,6 +13,7 @@ const Heading = styled('h1')(
   {
     fontFamily: 'Roboto',
     fontWeight: 700,
+    fontStyle: 'normal',
     fontSize: '3.6rem',
     textAlign: 'center',
     textTransform: 'uppercase',
@@ -69,6 +71,7 @@ export function IndexContent() {
         label={t(`${nameSpace}.card${index + 1}.label`)}
         src={imgSrc}
         alt={t(`${nameSpace}.card${index + 1}.imgAlt`)}
+        key={`${nameSpace}-${index}`}
       />
     ))
 
