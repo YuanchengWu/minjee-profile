@@ -1,19 +1,19 @@
-import { ThemeProvider } from "@emotion/react"
-import styled from "@emotion/styled"
+import { ThemeProvider } from '@emotion/react'
+import styled from '@emotion/styled'
 
-import { GlobalStyles } from "../components/GlobalStyles"
-import { lightTheme } from "../theme"
-import "../i18n"
-import { Suspense } from "react"
-import { IndexContent } from "../components/IndexContent"
+import { GlobalStyles } from '../components/GlobalStyles'
+import { lightTheme } from '../theme'
+import '../i18n'
+import { Suspense } from 'react'
+import { IndexContent } from '../components/IndexContent'
 
-const Main = styled("main")(
+const Main = styled('main')(
   {
-    height: "100vh",
-    width: "100vw",
-    display: "grid",
-    gridTemplateColumns: "1fr",
-    gridTemplateRows: "0.2fr 1.8fr",
+    height: '100vh',
+    width: '100vw',
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: '0.2fr 1.8fr',
     gridTemplateAreas: `
       "header"
       "boards"

@@ -1,5 +1,5 @@
-import React from "react"
-import { Global, css } from "@emotion/react"
+import React from 'react'
+import { Global, css } from '@emotion/react'
 
 const globalStyles = css`
   :root {
@@ -7,8 +7,8 @@ const globalStyles = css`
   }
 
   html {
-    font-family: -apple-system, Roboto, "Segoe UI", Oxygen, Ubuntu, Cantarell,
-      "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   * {

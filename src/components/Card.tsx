@@ -1,11 +1,11 @@
-import { ImgHTMLAttributes } from "react"
-import styled from "@emotion/styled"
-import { rgba } from "emotion-rgba"
+import { ImgHTMLAttributes } from 'react'
+import styled from '@emotion/styled'
+import { rgba } from 'emotion-rgba'
 
 export enum CardVariant {
-  Icon = "icon",
-  Icons = "icons",
-  Image = "image",
+  Icon = 'icon',
+  Icons = 'icons',
+  Image = 'image',
 }
 
 export interface CardProps extends ImgHTMLAttributes<HTMLImageElement> {
@@ -36,14 +36,14 @@ export interface CardProps extends ImgHTMLAttributes<HTMLImageElement> {
   icons?: ImgHTMLAttributes<HTMLImageElement>[]
 }
 
-const Background = styled("article")<Pick<CardProps, "variant">>(
+const Background = styled('article')<Pick<CardProps, 'variant'>>(
   {
-    display: "flex",
-    flexDirection: "column",
-    alignContent: "space-between",
-    borderRadius: "2.0rem",
-    padding: "1.8rem",
-    overflow: "hidden",
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'space-between',
+    borderRadius: '2.0rem',
+    padding: '1.8rem',
+    overflow: 'hidden',
   },
   ({ theme }) => ({
     backgroundColor: rgba(theme.colors.white, 0.8),
@@ -52,52 +52,52 @@ const Background = styled("article")<Pick<CardProps, "variant">>(
     switch (variant) {
       case CardVariant.Icon:
         return {
-          textAlign: "left",
+          textAlign: 'left',
         }
       case CardVariant.Image:
         return {
-          textAlign: "center",
+          textAlign: 'center',
         }
     }
   }
 )
 
-const Title = styled("h2")(
+const Title = styled('h2')(
   {
-    fontFamily: "Roboto",
-    fontSize: "1.8rem",
-    fontWeight: "bold",
-    marginBottom: "0.8rem",
+    fontFamily: 'Roboto',
+    fontSize: '1.8rem',
+    fontWeight: 'bold',
+    marginBottom: '0.8rem',
   },
   ({ theme }) => ({
     color: theme.colors.gray1,
   })
 )
 
-const TextContent = styled("p")(
+const TextContent = styled('p')(
   {
-    fontFamily: "Roboto",
-    fontSize: "1.4rem",
-    flex: "1",
-    marginBottom: "0.8rem",
+    fontFamily: 'Roboto',
+    fontSize: '1.4rem',
+    flex: '1',
+    marginBottom: '0.8rem',
   },
   ({ theme }) => ({
     color: theme.colors.gray2,
   })
 )
 
-const Label = styled("p")(
+const Label = styled('p')(
   {
-    borderRadius: "1rem",
-    fontFamily: "Source Sans Pro",
+    borderRadius: '1rem',
+    fontFamily: 'Source Sans Pro',
     fontWeight: 600,
-    fontSize: "1rem",
-    letterSpacing: "0.1rem",
-    lineHeight: "1.6rem",
-    padding: "0.3rem 0.8rem",
-    width: "fit-content",
-    textTransform: "uppercase",
-    alignSelf: "flex-end",
+    fontSize: '1rem',
+    letterSpacing: '0.1rem',
+    lineHeight: '1.6rem',
+    padding: '0.3rem 0.8rem',
+    width: 'fit-content',
+    textTransform: 'uppercase',
+    alignSelf: 'flex-end',
   },
   ({ theme }) => ({
     backgroundColor: theme.colors.gray5,
@@ -105,34 +105,34 @@ const Label = styled("p")(
   })
 )
 
-const ContentContainer = styled("div")({
-  display: "flex",
-  alignContent: "flex-end",
-  flexWrap: "wrap",
+const ContentContainer = styled('div')({
+  display: 'flex',
+  alignContent: 'flex-end',
+  flexWrap: 'wrap',
 })
 
-const Image = styled("img")({
-  borderRadius: "2.0rem",
-  maxWidth: "100%",
-  maxHeight: "100%",
-  marginTop: "0.8rem",
+const Image = styled('img')({
+  borderRadius: '2.0rem',
+  maxWidth: '100%',
+  maxHeight: '100%',
+  marginTop: '0.8rem',
 })
 
-const Icon = styled("img")<Pick<CardProps, "variant">>(
+const Icon = styled('img')<Pick<CardProps, 'variant'>>(
   {
-    borderRadius: "50%",
-    width: "4.8rem",
+    borderRadius: '50%',
+    width: '4.8rem',
   },
   ({ variant }) => {
     switch (variant) {
       case CardVariant.Icon:
         return {
-          marginLeft: "auto",
+          marginLeft: 'auto',
         }
       case CardVariant.Icons:
         return {
-          marginTop: "0.8rem",
-          marginRight: "auto",
+          marginTop: '0.8rem',
+          marginRight: 'auto',
         }
     }
   }

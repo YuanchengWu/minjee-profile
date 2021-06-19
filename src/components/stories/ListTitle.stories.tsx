@@ -1,10 +1,10 @@
-import { Meta, Story } from "@storybook/react"
-import { lightTheme } from "../../theme"
+import { Meta, Story } from '@storybook/react'
+import { lightTheme } from '../../theme'
 
-import { ListTitle, ListTitleProps } from "../ListTitle"
+import { ListTitle, ListTitleProps } from '../ListTitle'
 
 export default {
-  title: "Components/List Title",
+  title: 'Components/List Title',
   component: ListTitle,
   decorators: [
     (Story) => (
@@ -15,7 +15,7 @@ export default {
   ],
   parameters: {
     backgrounds: {
-      default: "Gradient",
+      default: 'Gradient',
     },
   },
 } as Meta
@@ -25,5 +25,5 @@ const Template: Story<ListTitleProps> = (args) => <ListTitle {...args} />
 export const Default = Template.bind({})
 Default.args = {
   backgroundColor: lightTheme.colors.sky500,
-  children: "About",
+  children: 'About',
 }

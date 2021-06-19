@@ -1,10 +1,10 @@
-import { ThemeProvider } from "@emotion/react"
+import { ThemeProvider } from '@emotion/react'
 
-import { GlobalStyles } from "../src/components/GlobalStyles"
-import { lightTheme } from "../src/theme"
+import { GlobalStyles } from '../src/components/GlobalStyles'
+import { lightTheme } from '../src/theme'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -14,7 +14,7 @@ export const parameters = {
   backgrounds: {
     values: [
       {
-        name: "Gradient",
+        name: 'Gradient',
         value: `linear-gradient(
           213.47deg,
           ${lightTheme.colors.yellow50} 10.99%, 

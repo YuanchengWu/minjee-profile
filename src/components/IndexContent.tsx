@@ -1,55 +1,55 @@
-import React, { useContext } from "react"
-import styled from "@emotion/styled"
-import { ThemeContext } from "@emotion/react"
-import { useTranslation } from "react-i18next"
+import React, { useContext } from 'react'
+import styled from '@emotion/styled'
+import { ThemeContext } from '@emotion/react'
+import { useTranslation } from 'react-i18next'
 
-import { ListTitle } from "./ListTitle"
-import { Card, CardVariant } from "./Card"
-import ProfilePic from "../images/linkedin-profile-edited.jpg"
-import Samsung from "../images/samsung.svg"
+import { ListTitle } from './ListTitle'
+import { Card, CardVariant } from './Card'
+import ProfilePic from '../images/linkedin-profile-edited.jpg'
+import Samsung from '../images/samsung.svg'
 
-const Heading = styled("h1")(
+const Heading = styled('h1')(
   {
-    fontFamily: "Roboto",
+    fontFamily: 'Roboto',
     fontWeight: 700,
-    fontSize: "3.6rem",
-    textAlign: "center",
-    textTransform: "uppercase",
-    gridArea: "header",
-    alignSelf: "center",
+    fontSize: '3.6rem',
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    gridArea: 'header',
+    alignSelf: 'center',
   },
   ({ theme }) => ({
     color: theme.colors.gray2,
   })
 )
 
-const ScrollableContainer = styled("div")({
-  overflow: "auto",
+const ScrollableContainer = styled('div')({
+  overflow: 'auto',
 })
 
-const BoardsContainer = styled("section")({
-  display: "grid",
-  gridTemplateColumns: "repeat(5, min-content)",
-  columnGap: "2.4rem",
-  justifyContent: "center",
-  width: "fit-content",
+const BoardsContainer = styled('section')({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(5, min-content)',
+  columnGap: '2.4rem',
+  justifyContent: 'center',
+  width: 'fit-content',
 
-  "> :first-of-type": {
-    marginLeft: "2.4rem",
+  '> :first-of-type': {
+    marginLeft: '2.4rem',
   },
 
-  "> :last-of-type": {
-    marginRight: "2.4rem",
+  '> :last-of-type': {
+    marginRight: '2.4rem',
   },
 })
 
-const Board = styled("div")({
-  width: "26rem",
-  display: "flex",
-  flexDirection: "column",
+const Board = styled('div')({
+  width: '26rem',
+  display: 'flex',
+  flexDirection: 'column',
 
-  "> :not(card:last-of-type)": {
-    marginBottom: "1.6rem",
+  '> :not(card:last-of-type)': {
+    marginBottom: '1.6rem',
   },
 })
 
@@ -74,34 +74,34 @@ export function IndexContent() {
 
   return (
     <>
-      <Heading>{t("heading")}</Heading>
+      <Heading>{t('heading')}</Heading>
       <ScrollableContainer>
         <BoardsContainer>
           <Board>
             <ListTitle backgroundColor={colors.sky500}>
-              {t("boards.about.title")}
+              {t('boards.about.title')}
             </ListTitle>
             <Card
               variant={CardVariant.Image}
-              title={t("boards.about.card1.title")}
-              textContent={t("boards.about.card1.textContent")}
+              title={t('boards.about.card1.title')}
+              textContent={t('boards.about.card1.textContent')}
               src={ProfilePic}
-              alt={t("boards.about.card1.imgAlt")}
+              alt={t('boards.about.card1.imgAlt')}
             />
           </Board>
           <Board>
             <ListTitle backgroundColor={colors.lime500}>
-              {t("boards.experience.title")}
+              {t('boards.experience.title')}
             </ListTitle>
             {/* TODO: get images */}
-            {iconCards("boards.experience", [Samsung, "", ""])}
+            {iconCards('boards.experience', [Samsung, '', ''])}
           </Board>
           <Board>
             <ListTitle backgroundColor={colors.yellow500}>
-              {t("boards.projects.title")}
+              {t('boards.projects.title')}
             </ListTitle>
             {/* TODO: get images */}
-            {iconCards("boards.projects", ["", "", ""])}
+            {iconCards('boards.projects', ['', '', ''])}
           </Board>
           <Board />
           <Board />

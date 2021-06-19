@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from '@emotion/styled'
 
 export type ListTitleProps = {
   /**
@@ -7,24 +7,24 @@ export type ListTitleProps = {
   backgroundColor: string
 }
 
-const Background = styled("div")<Pick<ListTitleProps, "backgroundColor">>(
+const Background = styled('div')<Pick<ListTitleProps, 'backgroundColor'>>(
   {
-    borderRadius: "1.6rem",
-    padding: "1.2rem 1.6rem",
+    borderRadius: '1.6rem',
+    padding: '1.2rem 1.6rem',
   },
   ({ backgroundColor }) => ({
     backgroundColor,
   })
 )
 
-const Title = styled("h2")(
+const Title = styled('h2')(
   {
-    fontFamily: "Roboto",
+    fontFamily: 'Roboto',
     fontWeight: 700,
-    fontSize: "2rem",
-    lineHeight: "2.3rem",
-    textAlign: "center",
-    textTransform: "uppercase",
+    fontSize: '2rem',
+    lineHeight: '2.3rem',
+    textAlign: 'center',
+    textTransform: 'uppercase',
   },
   ({ theme }) => ({
     color: theme.colors.white,
