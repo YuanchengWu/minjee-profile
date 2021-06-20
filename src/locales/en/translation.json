@@ -1,0 +1,116 @@
+{
+  "heading": "Minjee Kim, PMP",
+  "boards": {
+    "about": {
+      "title": "About",
+      "card": {
+        "title": "I’m a Project Manager.",
+        "textContent": "Also a Designer with a keen eye for creating marketable, accessible, and localizable digital products.",
+        "alt": "Minjee’s profile photo"
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "cards": [
+        {
+          "title": "Bilingual Facility Planner",
+          "textContent": "Samsung Research America",
+          "label": "Jun 2019 — May 2020",
+          "alt": "Samsung Research America logo"
+        },
+        {
+          "title": "Project Manager",
+          "textContent": "Wei Jian Research Center",
+          "label": "Oct 2017 — Dec 2018",
+          "alt": "Wei Jian Research Center logo"
+        },
+        {
+          "title": "Interpreter | Translator",
+          "textContent": "Freelancer",
+          "label": "2017 — Present",
+          "alt": "Personal logo"
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "cards": [
+        {
+          "title": "Project Manager | Web Designer",
+          "textContent": "Minnesota Association for Korean Americans",
+          "label": "Feb — May 2021",
+          "alt": "Minnesota Association for Korean Americans logo"
+        },
+        {
+          "title": "Localization Project Manager",
+          "textContent": "fullgallop.me",
+          "label": "Oct — Dec 2020",
+          "alt": "fullgallop.me logo"
+        },
+        {
+          "title": "Localization | Design Project Manager",
+          "textContent": "Personal Website",
+          "label": "July 2020 — Present",
+          "alt": "Personal logo"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "cards": [
+        {
+          "title": "Softwares",
+          "textContent": "JIRA | Trello | SharePoint Computer-Aided Translation (CAT) | Translation Management System (TMS) | Photoshop | Illustrator",
+          "alts": [
+            "JIRA logo",
+            "Trello logo",
+            "SharePoint Computer-Aided Translation (CAT) logo",
+            "Translation Management System (TMS) logo",
+            "Photoshop logo",
+            "Illustrator logo"
+          ]
+        },
+        {
+          "title": "Computer Languages",
+          "textContent": "HTML | CSS | Python",
+          "alts": ["HTML logo", "CSS logo", "Python logo"]
+        },
+        {
+          "title": "Human Languages",
+          "textContent": "Korean | English | Chinese",
+          "alts": ["South Korean flag", "American flag", "PRC flag"]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "cards": [
+        {
+          "title": "Project Management Professional (PMP)",
+          "textContent": "Project Management Institute",
+          "alt": "Project Management Institute logo"
+        },
+        {
+          "title": "Internationalization and Localization",
+          "textContent": "University of Washington",
+          "alt": "University of Washington emblem"
+        },
+        {
+          "title": "Principles and Practice of CAT",
+          "textContent": "Tsinghua University",
+          "alt": "Tsinghua University emblem"
+        },
+        {
+          "title": "Translation in Practice",
+          "textContent": "Nanjing University",
+          "alt": "Nanjing University emblem"
+        },
+        {
+          "title": "B.A. Fine Art | Design Minor",
+          "textContent": "University of Minnesota, Twin Cities",
+          "alt": "University of Minnesota emblem"
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from '@emotion/styled'
-import { ThemeContext } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import { useTranslation } from 'react-i18next'
 import '@fontsource/roboto/700.css'
 
@@ -35,6 +35,7 @@ const BoardsContainer = styled('section')({
   columnGap: '2.4rem',
   justifyContent: 'center',
   width: 'fit-content',
+  margin: 'auto',
 
   '> :first-of-type': {
     marginLeft: '2.4rem',
@@ -57,23 +58,46 @@ const Board = styled('div')({
 
 export function IndexContent() {
   const { t } = useTranslation()
-  const { colors } = useContext(ThemeContext)
+  const { colors } = useTheme()
 
   const iconCards = (
-    nameSpace: string,
+    nameSpace: 'boards.experience' | 'boards.projects' | 'boards.education',
     imageSources: string[]
-  ): JSX.Element[] =>
-    imageSources.map((imgSrc, index) => (
+  ): JSX.Element[] => {
+    const labels = t(`${nameSpace}.cards`, { returnObjects: true })
+
+    return labels.map((label, index) => (
       <Card
         variant={CardVariant.Icon}
-        title={t(`${nameSpace}.card${index + 1}.title`)}
-        textContent={t(`${nameSpace}.card${index + 1}.textContent`)}
-        label={t(`${nameSpace}.card${index + 1}.label`)}
-        src={imgSrc}
-        alt={t(`${nameSpace}.card${index + 1}.imgAlt`)}
+        title={label.title}
+        textContent={label.textContent}
+        label={label.label}
+        src={imageSources[index]}
+        alt={label.alt}
         key={`${nameSpace}-${index}`}
       />
     ))
+  }
+
+  const iconsCards = (
+    nameSpace: 'boards.skills',
+    imagesSources: string[][]
+  ): JSX.Element => {
+    const labels = t(`${nameSpace}.cards`, { returnObjects: true })
+
+    return labels.map((label, i) => (
+      <Card
+        variant={CardVariant.Icons}
+        title={label.title}
+        textContent={label.textContent}
+        icons={imagesSources[i].map((imageSource, j) => ({
+          src: imageSource,
+          alt: label.alts[j],
+        }))}
+        key={`${nameSpace}-${i}`}
+      />
+    ))
+  }
 
   return (
     <>
@@ -86,10 +110,10 @@ export function IndexContent() {
             </ListTitle>
             <Card
               variant={CardVariant.Image}
-              title={t('boards.about.card1.title')}
-              textContent={t('boards.about.card1.textContent')}
+              title={t('boards.about.card.title')}
+              textContent={t('boards.about.card.textContent')}
               src={ProfilePic}
-              alt={t('boards.about.card1.imgAlt')}
+              alt={t('boards.about.card.alt')}
             />
           </Board>
           <Board>
@@ -97,17 +121,28 @@ export function IndexContent() {
               {t('boards.experience.title')}
             </ListTitle>
             {/* TODO: get images */}
-            {iconCards('boards.experience', [Samsung, '', ''])}
+            {iconCards('boards.experience', [Samsung])}
           </Board>
           <Board>
             <ListTitle backgroundColor={colors.yellow500}>
               {t('boards.projects.title')}
             </ListTitle>
             {/* TODO: get images */}
-            {iconCards('boards.projects', ['', '', ''])}
+            {iconCards('boards.projects', [])}
           </Board>
-          <Board />
-          <Board />
+          <Board>
+            <ListTitle backgroundColor={colors.red500}>
+              {t('boards.skills.title')}
+            </ListTitle>
+            {/* TODO: get images */}
+            {iconsCards('boards.skills', [[], [], []])}
+          </Board>
+          <Board>
+            <ListTitle backgroundColor={colors.purple500}>
+              {t('boards.education.title')}
+            </ListTitle>
+            {iconCards('boards.education', [])}
+          </Board>
         </BoardsContainer>
       </ScrollableContainer>
     </>

@@ -37,7 +37,6 @@
     "gatsby-transformer-sharp": "^3.4.0",
     "i18next": "^20.3.1",
     "i18next-browser-languagedetector": "^6.1.1",
-    "i18next-http-backend": "^1.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
