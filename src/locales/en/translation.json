@@ -1,4 +1,8 @@
 {
+  "hero": {
+    "title": "Hi, my name is Minjee.\nI’m a Project Manager.",
+    "subtitle": "Let me introduce myself with one of my favorite project management tools – Trello!"
+  },
   "heading": "Minjee Kim, PMP",
   "boards": {
     "about": {

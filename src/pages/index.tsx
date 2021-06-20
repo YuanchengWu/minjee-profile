@@ -6,19 +6,27 @@ import { lightTheme } from '../theme'
 import '../i18n'
 import { Suspense } from 'react'
 import { IndexContent } from '../components/IndexContent'
+import { Hero } from '../components/Hero'
 
-const Main = styled('main')(
+const Main = styled('main')<{ isShowingHero: boolean }>(
   {
     height: '100vh',
     width: '100vw',
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gridTemplateRows: '0.2fr 1.8fr',
-    gridTemplateAreas: `
+  },
+  ({ isShowingHero }) =>
+    isShowingHero
+      ? {
+          gridTemplateRows: '1fr',
+        }
+      : {
+          gridTemplateRows: '0.2fr 1.8fr',
+          gridTemplateAreas: `
       "header"
       "boards"
     `,
-  },
+        },
   ({ theme }) => ({
     background: `linear-gradient(
     213.47deg,
@@ -36,8 +44,10 @@ function IndexPage(): JSX.Element {
     <Suspense fallback="loading...">
       <ThemeProvider theme={lightTheme}>
         <GlobalStyles />
-        <Main>
+
+        <Main isShowingHero={false}>
           <IndexContent />
+          {/* <Hero /> */}
         </Main>
       </ThemeProvider>
     </Suspense>
